@@ -21,6 +21,7 @@ import android.widget.ImageView
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -84,6 +85,16 @@ class MainActivity : AppCompatActivity() {
         Image.startAnimation(slide_left);
         //myInput.startAnimation(fade_in);
 
+
+        myInput.setOnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
+                closeKeyboard(myInput)
+                true
+            } else {
+                false
+            }
+        }
+
         myInput.setOnEditorActionListener { v, actionId, event ->
             if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_DONE ||
                 event?.keyCode == KeyEvent.KEYCODE_ENTER) {
@@ -140,3 +151,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
