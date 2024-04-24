@@ -86,6 +86,7 @@ class MainActivity : AppCompatActivity() {
         //myInput.startAnimation(fade_in);
 
 
+
         myInput.setOnKeyListener { v, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
                 closeKeyboard(myInput)

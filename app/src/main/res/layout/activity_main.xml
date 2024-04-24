@@ -32,19 +32,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976">
 
-        <Button
+        <com.example.customappcompatbutton.CustomButton
             android:id="@+id/button"
             android:layout_width="125dp"
             android:layout_height="48dp"
             android:layout_marginBottom="500dp"
-            android:background="@drawable/round_corner"
             android:text="@string/go"
-            android:textColor="@color/black"
             android:visibility="invisible"
+            android:background="@drawable/button_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="125dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="500dp"
+            android:background="@drawable/button_shape"
+            android:text="@string/go"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+           -->
+
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"
